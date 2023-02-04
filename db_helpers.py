@@ -36,6 +36,7 @@ def get_all_doctors() -> list:
     new_results_list = []
     for result in results_list:
         if '_id' in result: del result['_id']
+        result['timeslots'] = list(result['timeslots'].keys())
         new_results_list.append(result)
     return new_results_list
 
