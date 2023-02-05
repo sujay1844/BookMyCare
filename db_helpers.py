@@ -64,6 +64,12 @@ def update_doctor(data:dict) -> None:
     if result.modified_count != 1:
         raise Exception("Doctor data not updated")
 
+def add_doctor(doctor):
+    doctors_collection.insert_one(doctor)
+
+def add_patient(patient):
+    patients_collection.insert_one(patient)
+
 def _import_from_json():
     doctors_data = load('doctors.json', Datatype.DICT)
     for _, doctor in doctors_data.items():

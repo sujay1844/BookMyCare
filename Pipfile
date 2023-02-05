@@ -7,7 +7,7 @@ name = "pypi"
 flask = "*"
 pymongo = "*"
 gtts = "*"
-playsound = "*"
+twilio = "*"
 
 [dev-packages]
 
